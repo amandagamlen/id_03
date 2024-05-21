@@ -1,0 +1,182 @@
+
+@font-face {
+  font-family: "unifont";
+  src: url(assets/unifont.otf);
+}
+body {
+  margin: 0
+}
+
+#overlay {
+	position: absolute;
+  bottom: 50%;
+	display: block;
+  margin-left: 50%;
+  text-align: center;
+}
+#overlay-1 {
+	/* background-color: #ff0000; */
+	width: 160px;
+	height: 160px;
+	position: absolute;
+	top: 50px;
+	left: 100px;
+}
+#overlay-2 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 50px;
+	right: 150px;
+}
+#overlay-3 {
+	width: 240px;
+	height: 312px;
+	position: absolute;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+	bottom: 0px;
+	right: 0;
+}
+.typewriter h1 {
+  color: #fff;
+  font-family: "unifont";
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .2em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .2em; /* Adjust as needed */
+  animation: 
+    typing 3s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  padding: 20px;
+  font-family: "helvetica";
+  font-weight: lighter;
+
+}
+.header a {
+  color: black;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header:hover {
+  mix-blend-mode: difference;
+
+}
+
+/* .header a.active {
+text-decoration: underline;
+color: black;
+} */
+
+.header-right {
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  padding: 20px;
+  font-family: "helvetica";
+  font-weight: lighter;
+}
+
+.header-right a {
+  color: black;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header-right:hover {
+  mix-blend-mode: difference;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
+}
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+
+
+.overlay-box {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.577);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay-box:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 100px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  z-index: 50000;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #d80606;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
