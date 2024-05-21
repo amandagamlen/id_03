@@ -1,41 +1,8 @@
 {
-  "hash": "12fbcc0f",
-  "browserHash": "1a1ecf42",
-  "optimized": {
-    "three": {
-      "src": "../../node_modules/three/build/three.module.js",
-      "file": "three.js",
-      "fileHash": "b77b96c0",
-      "needsInterop": false
-    },
-    "three/addons/controls/OrbitControls.js": {
-      "src": "../../node_modules/three/examples/jsm/controls/OrbitControls.js",
-      "file": "three_addons_controls_OrbitControls__js.js",
-      "fileHash": "5698ae6c",
-      "needsInterop": false
-    },
-    "three/addons/libs/lil-gui.module.min.js": {
-      "src": "../../node_modules/three/examples/jsm/libs/lil-gui.module.min.js",
-      "file": "three_addons_libs_lil-gui__module__min__js.js",
-      "fileHash": "41910283",
-      "needsInterop": false
-    },
-    "three/addons/loaders/GLTFLoader.js": {
-      "src": "../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
-      "file": "three_addons_loaders_GLTFLoader__js.js",
-      "fileHash": "92ae984a",
-      "needsInterop": false
-    },
-    "three/addons/objects/Sky.js": {
-      "src": "../../node_modules/three/examples/jsm/objects/Sky.js",
-      "file": "three_addons_objects_Sky__js.js",
-      "fileHash": "d4044c06",
-      "needsInterop": false
-    }
-  },
-  "chunks": {
-    "chunk-YW5CZGKX": {
-      "file": "chunk-YW5CZGKX.js"
-    }
-  }
+  "hash": "008c35b0",
+  "configHash": "bd0f49f9",
+  "lockfileHash": "0ae6c770",
+  "browserHash": "b3461712",
+  "optimized": {},
+  "chunks": {}
 }
