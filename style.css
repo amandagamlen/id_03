@@ -1,42 +1,91 @@
+html {
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  position: fixed;
+  background-color:#bdd6ec;
+  background: linear-gradient(302deg, #89a8d4, #bdd6ec, #eef3ff, #bdd6ec);
+  background-size: 800% 800%;
+  -webkit-animation: Sky 27s ease infinite;
+  -moz-animation: Sky 27s ease infinite;
+  animation: Sky 27s ease infinite;
+}
 
+a {
+  cursor:pointer;
+  pointer-events: auto;
+}
+
+@-webkit-keyframes Sky {
+  0%{background-position:4% 0%}
+  50%{background-position:97% 100%}
+  100%{background-position:4% 0%}
+}
+@-moz-keyframes Sky {
+  0%{background-position:4% 0%}
+  50%{background-position:97% 100%}
+  100%{background-position:4% 0%}
+}
+@keyframes Sky {
+  0%{background-position:4% 0%}
+  50%{background-position:97% 100%}
+  100%{background-position:4% 0%}
+}
 @font-face {
   font-family: "unifont";
   src: url(assets/unifont.otf);
 }
-body {
-  margin: 0
-}
+
+
+
 
 #overlay {
-	position: absolute;
-  bottom: 50%;
-	display: block;
-  margin-left: 50%;
+  position: absolute;
+  display: block;
+  margin-top: 50vh;
   text-align: center;
+  margin-left: 50%;
 }
 #overlay-1 {
-	/* background-color: #ff0000; */
-	width: 160px;
-	height: 160px;
-	position: absolute;
-	top: 50px;
-	left: 100px;
+  /* background-color: #ff0000; */
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  pointer-events: none;
 }
 #overlay-2 {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	top: 50px;
-	right: 150px;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 50px;
+  right: 150px;
+  pointer-events: none;
+   transform: rotate(-20deg);
 }
 #overlay-3 {
-	width: 240px;
-	height: 312px;
-	position: absolute;
+  width: 240px;
+  height: 312px;
+  position: absolute;
   filter: blur(4px);
   -webkit-filter: blur(4px);
-	bottom: 0px;
-	right: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+#overlay-4 {
+  /* background-color: #ff0000; */
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 400px;
+  left: 70px;
+  pointer-events: none;
 }
 .typewriter h1 {
   color: #fff;
@@ -49,6 +98,7 @@ body {
   animation: 
     typing 3s steps(30, end),
     blink-caret .5s step-end infinite;
+  pointer-events: none;
 }
 
 .header {
@@ -59,7 +109,7 @@ body {
   padding: 20px;
   font-family: "helvetica";
   font-weight: lighter;
-
+   z-index: 99;
 }
 .header a {
   color: black;
@@ -75,11 +125,6 @@ body {
 
 }
 
-/* .header a.active {
-text-decoration: underline;
-color: black;
-} */
-
 .header-right {
   position: fixed;
   right: 0;
@@ -88,6 +133,7 @@ color: black;
   padding: 20px;
   font-family: "helvetica";
   font-weight: lighter;
+   z-index: 99;
 }
 
 .header-right a {
@@ -124,8 +170,6 @@ color: black;
   text-align: center;
 }
 
-
-
 .overlay-box {
   position: fixed;
   top: 0;
@@ -136,6 +180,9 @@ color: black;
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .overlay-box:target {
   visibility: visible;
@@ -147,12 +194,10 @@ color: black;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+   width: 30%;
   position: relative;
-  transition: all 5s ease-in-out;
-  z-index: 50000;
+  transition: all .5s;
 }
-
 .popup .close {
   position: absolute;
   top: 20px;
@@ -180,3 +225,33 @@ color: black;
   }
 }
 
+@media only screen and (max-width: 600px) {
+#overlay {
+    margin-left: 40%;
+  }  
+  .popup{
+     margin: 50px auto;
+  }
+  #overlay-1 img{
+     margin-left: -100px;
+  }
+  #overlay-2 img{
+  margin-left: 150px;
+    width: 60px;
+     margin-top: 70px;
+  }
+  #overlay-3 {
+    right: -90px;
+    bottom: -80px;
+  }
+  #overlay-4 img {
+    margin-top: 100px;
+    width: 50%;
+    height: 50%;
+    margin-left: -50px;
+  }
+  #overlay-3 img{
+    width: 180px;
+    height: 234px;
+  }
+}
